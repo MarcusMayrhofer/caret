@@ -46,7 +46,7 @@ modelInfo  <- list(label = "Random Forest",
                    },
                    prob = function(modelFit, newdata, submodels = NULL){
                      if(!is.data.frame(newdata)) newdata <- as.data.frame(newdata, stringsAsFactors = TRUE)
-                     out <- predict(modelFit, newdata)$classfreqtree
+                     out <- predict(modelFit, newdata)$classprobs
                      out
                    },
                    predictors = function(x, ...){
